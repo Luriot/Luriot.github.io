@@ -65,6 +65,11 @@
       border-color: #0056b3;
     }
 
+    .img-fluid {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
     footer {
       background-color: #343a40;
       color: #ffffff;
@@ -90,17 +95,18 @@
 
   <div class="container mt-5">
     <h1>ImageToVoronoi</h1>
-    <p>Le projet "ImageToVoronoi" utilise des diagrammes de Voronoi pour générer des QR codes modifiés avec une méthode d'insertion et d'extraction basée sur des graines aléatoires.</p>
+    <p>Le projet "ImageToVoronoi" utilise des diagrammes de Voronoi pour générer des images modifiés avec un calculs de voisins liés à des graines aléatoires.</p>
     <p>Technologies utilisées : Python, algorithmes de traitement d'image, diagrammes de Voronoi.</p>
-    <p>Ce projet explore la manière de coder des informations dans des QR codes tout en conservant leur lisibilité.</p>
+    <p>Ce projet explore la manière de modifier des images dans l'objectif de générer des versions alternatives et différentes.</p>
 
     <img src="images/luriocomparison.jpg" class="img-fluid mt-4" alt="ImageToVoronoi">
 
     <h3>Fonctionnalités principales :</h3>
     <ul>
-      <li>Génération de QR codes modifiés basés sur des diagrammes de Voronoi.</li>
-      <li>Insertion d'informations cachées dans les QR codes avec une méthode d'ajout et de soustraction complexe.</li>
-      <li>Extraction des informations à l'aide d'une graine aléatoire pour assurer la sécurité des données cachées.</li>
+      <li>Génération d'images modifiées basées sur des diagrammes de Voronoi.'</li>
+      <li>Choix du nombre de seeds.</li>
+      <li>Choix de l'algorithmes de calcul de distances</li>
+      <li>Exportation des images générées en format PNG.</li>
     </ul>
 
     <p><a href="https://github.com/Luriot/ImageToVoronoi" target="_blank" class="btn btn-primary">Voir le projet sur GitHub</a></p>
