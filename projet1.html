@@ -3,12 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ImageToVoronoi</title>
+  <title>ImageToVoronoi - Luriot</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+
+    nav {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #343a40;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      color: #495057;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    a.btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
+      <h1>Image to Voronoi</h1>
       <a class="navbar-brand" href="index.html">Retour au Portfolio</a>
     </div>
   </nav>
@@ -18,6 +93,8 @@
     <p>Le projet "ImageToVoronoi" utilise des diagrammes de Voronoi pour générer des QR codes modifiés avec une méthode d'insertion et d'extraction basée sur des graines aléatoires.</p>
     <p>Technologies utilisées : Python, algorithmes de traitement d'image, diagrammes de Voronoi.</p>
     <p>Ce projet explore la manière de coder des informations dans des QR codes tout en conservant leur lisibilité.</p>
+
+    <img src="images/luriocomparison.jpg" class="img-fluid mt-4" alt="ImageToVoronoi">
 
     <h3>Fonctionnalités principales :</h3>
     <ul>
@@ -30,7 +107,7 @@
   </div>
 
   <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>&copy; 2024 - Ton Nom</p>
+    <p>&copy; 2024 - <a href="https://github.com/luriot">Luriot</a></p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
