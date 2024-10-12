@@ -9,11 +9,14 @@
     body {
       background-color: #f8f9fa;
       font-family: 'Arial', sans-serif;
+      /* Ajoutez un padding en haut pour compenser la hauteur de la navbar */
+      padding-top: 80px;
     }
 
     nav {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 10px 20px;
+      transition: top 0.3s ease;
     }
 
     .navbar-brand {
@@ -98,7 +101,7 @@
 </head>
 <body>
   <!-- Barre de navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Portfolio</a>
     </div>
@@ -113,10 +116,19 @@
         <div class="card">
           <img src="images/projet1.png" class="card-img-top" alt="Logo ImageToVoronoi">
           <div class="card-body">
-            <h5 class="card-title">Projet ImageToVoronoi</h5>
-            <p class="card-text">Description rapide du projet 1. Ce projet utilise des technologies modernes pour résoudre des problématiques techniques.</p>
+            <h5 class="card-title">Image to Voronoi</h5>
+            <p class="card-text">Convertir une image en une version altérée à l'aide des régions de Voronoi.</p>
+            
+            <!-- Ajout des tags -->
+            <p class="mb-3">
+              <span class="badge bg-primary">C++</span>
+              <span class="badge bg-success">Voronoi</span>
+              <span class="badge bg-info">Matplotlib</span>
+            </p>
+          
             <a href="projet1.html" class="btn btn-primary">Voir plus</a>
           </div>
+          
         </div>
       </div>
       <!-- Projet 2 -->
@@ -124,10 +136,39 @@
         <div class="card">
           <img src="images/projet2.png" class="card-img-top" alt="Logo Qr Code Hider">
           <div class="card-body">
-            <h5 class="card-title">Projet Qr Code Hider</h5>
-            <p class="card-text">Description rapide du projet 2. Un autre projet innovant qui met en avant des solutions optimisées et performantes.</p>
+            <h5 class="card-title">Qr Code Hider</h5>
+            <p class="card-text">Encodage et décodage d'un QR Code dans un autre QRCode.</p>
+            
+            <!-- Ajout des tags -->
+            <p class="mb-3">
+              <span class="badge bg-primary">Python</span>
+              <span class="badge bg-success">QR_Code</span>
+              <span class="badge bg-info">QR_Code</span>
+            </p>
+          
             <a href="projet2.html" class="btn btn-primary">Voir plus</a>
           </div>
+
+        </div>
+      </div>
+      <!-- Projet 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/opencv_map.png" class="card-img-top" alt="Logo Qr Code Hider">
+          <div class="card-body">
+            <h5 class="card-title">Déplacement sur une carte</h5>
+            <p class="card-text">Interaction avec google maps un fonction des couleurs présentes à la caméra.</p>
+            
+            <!-- Ajout des tags -->
+            <p class="mb-3">
+              <span class="badge bg-primary">C++</span>
+              <span class="badge bg-success">OpenCV</span>
+              <span class="badge bg-info">QR_Code</span>
+            </p>
+          
+            <a href="projet3.html" class="btn btn-primary">Voir plus</a>
+          </div>
+
         </div>
       </div>
       <!-- Ajouter d'autres projets ici -->
@@ -141,5 +182,27 @@
 
   <!-- Script Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script pour cacher/afficher la navbar -->
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll <= 0) {
+        // Show the navbar when at the top of the page
+        navbar.style.top = '0';
+      } else if (currentScroll > lastScrollTop) {
+        // Hide the navbar when scrolling down
+        navbar.style.top = '-80px'; // Adjust based on navbar height
+      } else if (currentScroll < lastScrollTop) {
+        // Show the navbar when scrolling up
+        navbar.style.top = '0';
+      }
+      lastScrollTop = currentScroll;
+    });
+  </script>
 </body>
 </html>
